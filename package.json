@@ -3,7 +3,9 @@
     "ejs": "^3.1.10",
     "express": "^4.21.2",
     "nodemon": "^3.1.9",
-    "pg": "^8.13.3",
-    "start": "node index.js"
+    "pg": "^8.13.3"
+  }, 
+  "scripts": {
+    "start": "node app.js"
   }
 }
