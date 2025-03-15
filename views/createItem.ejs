@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/createItem.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1>Create Item</h1>
+    <!-- create item -->
+    <form action="/createItem" method="POST">
+        <!-- <label for="item">Item</label> -->
+        <input type="text" name="item" id="item" placeholder="Add item" required>
+        <button type="submit">submit</button>
+    </form>
+    
+</body>
+</html>

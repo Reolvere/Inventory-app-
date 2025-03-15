@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/itemView.css">
+    <title><%= title %></title>
+</head>
+
+<script>
+    async function deleteItem(itemId) {
+        const response = await fetch(`/items/${itemId}/delete`, {
+            method: "DELETE",
+        });
+  
+        if (response.ok) {
+            location.reload();  // Refresh page after deleting item
+        } else {
+            alert("Failed to delete item");
+        }
+    }
+</script>
+
+<body>
+    <h1>Items</h1>
+
+    <% items.forEach(item => { %>
+        <div class="li-container">
+            <li>
+                <%= item.item %>
+                <div>
+                    <button class="remove-btn" onclick="deleteItem('<%= item.id %>')">X</button>
+                    <a href="/items/<%= item.id %>/edit"><button class="edit-btn">Edit</button></a>
+                </div>
+            </li>
+        </div>
+      <% }); %>
+</body>
+</html>

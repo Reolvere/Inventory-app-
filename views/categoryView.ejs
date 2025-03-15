@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/categoryView.css">
+    <title><%= title %></title>
+</head>
+
+<script>
+    // handle delete button
+    async function deleteCategory(categoryId) {
+        const response = await fetch(`/category/${categoryId}/delete`, {
+            method: "DELETE",
+        })
+
+        if(response.ok){
+            location.reload()
+        } else {
+            alert("failed to delete category")
+        }
+    }
+</script>
+
+<body>
+    <h1>Categories</h1>
+
+    <% categories.forEach(category => { %>
+        <div class="li-container">
+            <li>
+            <%= category.category %>
+                <div>
+                    <button class="remove-btn" onclick="deleteCategory('<%= category.id %>')">X</button>
+                    <a href="/category/<%= category.id %>/edit"><button class="edit-btn">Edit</button></a>
+                </div>
+            </li>
+        </div>
+      <% }); %>
+</body>
+</html>

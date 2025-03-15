@@ -1,0 +1,38 @@
+body{
+    background-color: #FFEBEC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between; /* Space between text and button */
+    align-items: center; /* Align items in the center */
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    min-width: 300px;
+}
+
+.li-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 30px;
+}
+
+.remove-btn{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.edit-btn{
+    cursor: pointer;
+    background-color: #FFD6D8;
+    border: none;
+    border-radius: 10px;
+}

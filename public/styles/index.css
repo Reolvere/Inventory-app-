@@ -1,0 +1,22 @@
+body{
+    background-color: #FFEBEC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p{
+    font-size: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
